@@ -1,43 +1,27 @@
 // Màu sắc của web
-$primary-300: #2a73dd;
-$primary-200: #2196f3;
-$primary-100: #f5f9fe;
-$dark: #000;
-$light: #fff;
-$white: #fff;
-$warning-100: rgb(246, 239, 112);
-$warning-200: rgb(247, 236, 44);
-$warning-300: rgb(247, 235, 7);
+$primary-color: #181818;
+$secondary-color: #b61984;
+$text-white: #ffffff;
 
-//Màu chữ (text-color)
-$text-primary-300: $primary-300;
-$text-primary-200: $primary-200;
-$text-primary-100: $primary-100;
-$text-dark: $dark;
-$text-light: $light;
-$text-white: $white;
-$text-warning-100: $warning-100;
-$text-warning-200: $warning-200;
-$text-warning-300: $warning-300;
-//Màu background 
-$bg-primary-300: $primary-300;
-$bg-primary-200: $primary-200;
-$bg-primary-100: $primary-100;
-$bg-dark: $dark;
-$bg-light: $light;
-$bg-white: $white;
-$bg-warning-100: $warning-100;
-$bg-warning-200: $warning-200;
-$bg-warning-300: $warning-300;
+$border-dark: #181818;
+$border-white: #ffffff;
+
+$bg-dark: #181818;
+$bg-white: #ffffff;
+
 //sizing: (font size)
+$text-tiny: 12px;
+$text-smaller: 13px;
+$text-small: 13.5px;
 $text-base: 16px;
 $text-xl: 18px;
-$text-2xl: 20px;
+$text-2xl: 24px;
 $text-3xl: 30px;
 $text-4xl: 40px;
 $text-5xl: 50px;
 $text-6xl: 60px;
 $text-7xl: 70px;
+
 $fw-light: 300;
 $fw-normal: 400;
 $fw-semi: 600;
@@ -65,30 +49,6 @@ $p-6: 1.5rem;
 $p-7: 1.75rem;
 $p-8: 2rem;
 $p-9: 2.25rem;
-
-
-//mixin: tương tự hàm tuy nhiên không có xử lý return 
-@mixin mText($fz: $text-base, $fw: $fw-normal, $c: $text-dark) {
-    //default params (giá trị mặc định)
-    font-size: $fz;
-    font-weight: $fw;
-    color: $c;
-}
-
-@mixin mButton($fz, $fw, $c, $bg, $p, $bd, $br, $bg-hover, $c-hover) {
-    @include mText($fz, $fw , $c );
-    background: $bg;
-    padding: $p;
-    border: $bd;
-    border-radius: $br;
-    transition: all .3s;
-    cursor: pointer;
-
-    &:hover {
-        color: $c-hover;
-        background: $bg-hover;
-    }
-}
 
 //Tạo ra các class margin và paddding
 $lst-size: 0rem, 0.25rem, 0.75rem, 1rem, 1.25rem, 1.5rem; //List đơn giá trị
@@ -153,55 +113,3 @@ $i: 0;
 
     $i: $i+1;
 }
-
-
-
-// Màu sắc của web
-// $primary-300:#2a73dd;
-// $primary-200: #2196f3;
-// $primary-100: #f5f9fe;
-// $dark: #000;
-// $light: #fff;
-// $white:#fff;
-// $warning-100:rgb(246, 239, 112);
-// $warning-200:rgb(247, 236, 44);
-// $warning-300:rgb(247, 235, 7);
-//List key value: Tạo class util từ vòng lặp
-$lst_colors: (
-    "primary-300":#2a73dd,
-    "primary-200":#2196f3,
-    "primary-100":#f5f9fe
-);
-
-@each $key, $value in $lst_colors {
-    .text-#{$key} {
-        color: #{$value};
-    }
-
-    .bg-#{$key} {
-        background: #{$value};
-    }
-}
-
-//Tạo component từ vòng lặp
-@each $key, $value in $lst_colors {
-    .btn-outline-#{$key} {
-        @include mButton($text-base, $fw-semi, $value, $bg-light, 13.5px 44px, 1px solid $value, 5px, linear-gradient(120deg, #2a73dd, #60a4f4), $text-white);
-        box-shadow: -4px 4px 33px 0px rgba(135, 129, 129, 0.75);
-    }
-    
-    .btn-#{$key} {
-        @include mButton($text-base, $fw-semi, $light, $value, 13.5px 44px, none, 5px,$light, $value);
-        box-shadow: -4px 4px 33px 0px rgba(135, 129, 129, 0.75);
-    }
-}
-
-
-// .color-red {
-//     color: red;
-// }
-
-// .text-red{
-//     font-size: 17px;
-//     @extend .color-red;
-// }
