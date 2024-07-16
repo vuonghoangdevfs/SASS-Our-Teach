@@ -123,6 +123,80 @@
         }
     }
 }
+
+.teams {
+    position: relative;
+    padding-top: $m-8 * 2;
+    padding-bottom: $m-8 * 2; 
+    background-color: #dcd1f3;
+   &:after{
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: url(../img/Wave_White_bottom_right_shape_01.png);
+        background-position-y: bottom;
+    }
+    .content-wrap{
+        position: relative;
+        z-index: 1;
+        .team-list {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .item {
+            width: 25%;
+            padding: 20px;
+            .card{
+                border-radius: 10px;
+                background: #fff;
+                overflow: hidden;
+                text-align: center;
+            }
+            .card-body{
+                padding: $p-7;
+            }
+            .title-small {
+                margin-top: $m-2;
+            }
+            .desc {
+                margin-top: $m-4;
+                line-height: 1.7;
+                @include mText($text-small, $fw-normal, $primary-color);
+            }
+        }
+    }
+}
+
+.courses {
+    position: relative;
+    padding-top: $m-8 * 2;
+    padding-bottom: $m-8 * 2; 
+    &:after{
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: url(../img/accent_bottom_wave_01.png);
+        background-position-y: bottom;
+    }
+    .content-wrap{
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        .item-left {
+            width: 60%;
+        }
+        .item-right {
+            width: 40%;
+        }
+    }
+}
+
 .footer{
     color: $text-white;
     background-image: url(../img/footer_background.jpg);

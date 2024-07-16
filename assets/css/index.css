@@ -391,22 +391,30 @@ ul, li {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .primary-btn {
-  -webkit-box-shadow: 0 0 0 3em #b61984 inset;
-  box-shadow: 0 0 0 3em #b61984 inset;
   font-size: 13.5px;
   font-weight: 600;
   color: #ffffff;
-  background: #ffffff;
+  background: #b61984;
   padding: 0.75rem 1.25rem;
-  border: none;
+  border: 1px solid #b61984;
   border-radius: 50px;
   transition: all .3s;
   cursor: pointer;
+  -webkit-box-shadow: 0 0 0 3em #b61984 inset;
+  box-shadow: 0 0 0 3em #b61984 inset;
 }
 .primary-btn:hover {
   color: #b61984;
   background: #ffffff;
+}
+.primary-btn:hover {
+  -webkit-box-shadow: 0 0 0 3em #ffffff inset;
+  box-shadow: 0 0 0 3em #ffffff inset;
 }
 
 .subtitle {
@@ -417,6 +425,18 @@ ul, li {
 
 .title {
   font-size: 50px;
+  font-weight: 700;
+  color: #181818;
+}
+
+.subtitle-small {
+  font-size: 12px;
+  font-weight: 600;
+  color: #b61984;
+}
+
+.title-small {
+  font-size: 20px;
   font-weight: 700;
   color: #181818;
 }
@@ -893,6 +913,81 @@ ul, li {
 }
 .about-us .content-wrap .item {
   width: 50%;
+}
+
+.teams {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #dcd1f3;
+}
+.teams:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../img/Wave_White_bottom_right_shape_01.png);
+  background-position-y: bottom;
+}
+.teams .content-wrap {
+  position: relative;
+  z-index: 1;
+}
+.teams .content-wrap .team-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.teams .content-wrap .item {
+  width: 25%;
+  padding: 20px;
+}
+.teams .content-wrap .item .card {
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+.teams .content-wrap .item .card-body {
+  padding: 1.75rem;
+}
+.teams .content-wrap .item .title-small {
+  margin-top: 0.5rem;
+}
+.teams .content-wrap .item .desc {
+  margin-top: 1rem;
+  line-height: 1.7;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #181818;
+}
+
+.courses {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.courses:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../img/accent_bottom_wave_01.png);
+  background-position-y: bottom;
+}
+.courses .content-wrap {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+.courses .content-wrap .item-left {
+  width: 60%;
+}
+.courses .content-wrap .item-right {
+  width: 40%;
 }
 
 .footer {
